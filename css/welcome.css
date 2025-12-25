@@ -1,0 +1,492 @@
+/* ===================================================================
+   WELCOME PAGE STYLESHEET
+   Includes:
+   1. Loader
+   2. Welcome Hero
+   3. Cursor Trail
+   4. Intro Text
+   5. Experience Section (Asymmetrical Grid)
+   =================================================================== */
+
+
+/* ===============================================================
+   1. LOADER
+   =============================================================== */
+
+.loader {
+  position: fixed;
+  inset: 0;
+  background: #f5f5f5;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 0 0 3rem 3rem;
+  z-index: 20;
+  transition: opacity 1s ease, visibility 1s ease;
+}
+
+.progress-bar {
+  position: absolute;
+  left: 1.25rem;
+  bottom: 0;
+  width: 6px;
+  height: 0%;
+  background: #111;
+  transition: height 0.25s ease-out;
+}
+
+.percentage {
+  position: relative;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: clamp(4rem, 10vw, 7rem);
+  color: #111;
+  line-height: 1;
+}
+
+.percentage::after {
+  content: "%";
+  font-size: 0.4em;
+  position: absolute;
+  top: 0.05em;
+  right: -0.55em;
+}
+
+.loader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+/* ===============================================================
+   2. WELCOME HERO
+   =============================================================== */
+
+body.light {
+  background: #f8f8f8;
+}
+
+.welcome-hero {
+  opacity: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding: 3rem 2rem;
+  box-sizing: border-box;
+}
+
+/* --- Top Left Label --- */
+.top-left {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  text-align: left;
+}
+
+.top-left p {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  color: #222;
+  font-size: clamp(2rem, 1.6vw, 1.2rem);
+  line-height: 0.9;
+}
+
+.top-left .italic {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.top-left .sub {
+  opacity: 0.7;
+  font-size: 1.2rem;
+  margin-top: 0.4rem;
+}
+
+/* --- Central Hero Text --- */
+.hero-name {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: clamp(4rem, 14vw, 9rem);
+  color: #111;
+  letter-spacing: 0.05em;
+  z-index: 50;
+}
+
+/* --- Background Alpha Text --- */
+.bg-aphla {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Major Mono Display', monospace;
+  font-weight: 400;
+  font-size: clamp(12rem, 40vw, 30rem);
+  color: #111;
+  opacity: 0.05;
+  pointer-events: none;
+  user-select: none;
+  z-index: -1;
+}
+
+/* --- Bottom Hint Text --- */
+.bottom-text {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: #555;
+  opacity: 0.7;
+  letter-spacing: 0.05em;
+}
+
+/* Bottom blinking dot */
+.bottom-text::after {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 4px;
+  margin: 0.4rem auto 0;
+  border-radius: 50%;
+  background: #555;
+  animation: blink 1.8s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 0.2; transform: translateY(0); }
+  50% { opacity: 1; transform: translateY(-4px); }
+}
+
+
+/* ===============================================================
+   3. CURSOR TRAIL
+   =============================================================== */
+
+.cursor-trail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: visible;
+  z-index: 5;
+}
+
+.trail-img {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.9);
+  mix-blend-mode: multiply;
+  will-change: transform, opacity;
+}
+
+
+/* ===============================================================
+   4. INTRO TEXT
+   =============================================================== */
+
+.intro-text {
+  width: 85%;
+  max-width: 900px;
+  margin: 280px auto;
+  line-height: 1.25;
+  color: #111;
+}
+
+.intro-text p {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: -0.3px;
+  margin: 1.8rem 0;
+}
+
+.intro-text p .italic {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: #111;
+}
+
+/* Preserve italic styling post animation */
+.intro-text .italic,
+.intro-text .italic *,
+.intro-text span.italic,
+.intro-text .italic span {
+  font-family: "Playfair Display", serif !important;
+  font-style: italic !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.5px !important;
+  color: #111 !important;
+}
+
+@media (max-width: 768px) {
+  .intro-text p {
+    font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+    line-height: 1.3;
+  }
+}
+
+
+/* ===============================================================
+   5. EXPERIENCE SECTION (Asymmetrical Grid)
+   =============================================================== */
+
+.experience-cards {
+  width: 90%;
+  max-width: 1400px;
+  margin: 180px auto;
+}
+
+/* --- Header --- */
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.experience-header h2 {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: #111;
+}
+
+.experience-header .view-all {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  color: #111;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.experience-header .view-all:hover { opacity: 1; }
+
+
+/* --- Asymmetrical Grid Layout --- */
+/* ================= EXPERIENCE GRID (TWO COLUMN LAYOUT) ================= */
+
+.card-grid {
+  display: flex;
+  gap: 2.5rem;                    /* space between the two columns */
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+.grid-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;                      /* vertical gap between cards in same column */
+  height: 700px;                  /* total section height, adjust as needed */
+}
+
+.experience-card {
+  flex: 0 0 60%;                  /* takes 60% of column height */
+}
+
+.chapters-card {
+  flex: 0 0 40%;                  /* takes 40% of column height */
+}
+
+.gallery-card {
+  flex: 0 0 40%;
+}
+
+.reels-card {
+  flex: 0 0 60%;
+}
+
+/* --- Card visuals --- */
+.exp-card {
+  position: relative;
+  display: block;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #dcdcdc;
+  cursor: pointer;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  width: 100%;
+}
+
+.exp-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+.exp-card:hover img {
+  transform: scale(1.05);
+  filter: blur(3px) brightness(0.9);
+}
+
+/* --- Overlay animation --- */
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem;
+  background: linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.25) 100%);
+  color: #fff;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+}
+
+.exp-card:hover .overlay {
+  opacity: 1;
+  transform: translateY(0);
+  backdrop-filter: blur(10px);
+}
+
+.tags {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.overlay h3 {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 600;
+  opacity: 0;
+  transform: translateY(10px);
+  color: #fff;
+  transition: all 0.3s ease 0.1s;
+}
+
+.exp-card:hover .tags,
+.exp-card:hover .overlay h3 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- Floating Hover Icon --- */
+.hover-icon {
+  position: fixed;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%) scale(0);
+  font-size: 1.8rem;
+  color: #FFF;
+  background: #111;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  z-index: 15;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* --- Responsive layout --- */
+@media (max-width: 1000px) {
+  .card-grid {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .grid-column {
+    height: auto;
+  }
+
+  .experience-card,
+  .chapters-card,
+  .gallery-card,
+  .reels-card {
+    flex: unset;
+    height: auto;
+    aspect-ratio: 16 / 9;          /* keeps proportional visual shape */
+  }
+}
+
+
+/* =========================
+   LOCK MODAL STYLES
+   ========================= */
+.modal-lock {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.modal-lock.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  background: #fff;
+  color: #111;
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.25);
+}
+
+.modal-content p {
+  font-family: "Inter", sans-serif;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.modal-content button {
+  background: #fff;
+  color: #000;
+  border: 1px solid #666;
+  border-radius: 2rem;
+  padding: 0.6rem 1.4rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.modal-content button:hover {
+  background: #ddd;
+}

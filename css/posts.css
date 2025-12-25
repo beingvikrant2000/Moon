@@ -1,0 +1,278 @@
+/* ===============================
+   POSTS PAGE — Default Layout
+=============================== */
+
+.posts-wrap {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: 45% 55%;
+  height: 100vh;
+  background: #fdfbf8;
+  font-family: 'Georgia', 'Playfair Display', serif;
+}
+
+/* ===============================
+   LEFT SIDE — Cover + Text + List (Entire column scrolls)
+=============================== */
+
+.post-side-text {
+  display: block;
+  background: #fdfbf8;
+  border-right: 1px solid #eae5df;
+  color: #2b2b2b;
+  height: 100vh;
+  overflow-y: auto;
+  /* whole left side scrolls */
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
+}
+
+.post-side-text::-webkit-scrollbar {
+  width: 6px;
+}
+
+.post-side-text::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 6px;
+}
+
+/* Chapter cover with gradient overlay */
+.chapter-cover {
+  position: relative;
+  width: 100%;
+  height: 55vh;
+  overflow: hidden;
+  transition: all 0.6s ease;
+}
+
+.chapter-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.92);
+  transition: transform 1.5s ease;
+}
+
+.chapter-cover:hover img {
+  transform: scale(1.03);
+}
+
+.chapter-cover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top,
+      rgba(253, 251, 248, 1) 0%,
+      rgba(253, 251, 248, 0.85) 25%,
+      rgba(253, 251, 248, 0.4) 60%,
+      rgba(253, 251, 248, 0) 100%);
+  pointer-events: none;
+}
+
+/* Chapter title and info */
+.chapter-text {
+  padding: 2rem 3rem;
+}
+
+.chapter-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: clamp(2.3rem, 4.5vw, 3.4rem);
+  line-height: 1.2;
+  margin-bottom: 0.6rem;
+}
+
+.chapter-text h1 span {
+  color: #c7a065;
+}
+
+.chapter-text p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #4d4a46;
+  max-width: 400px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  text-decoration: none;
+  color: #7a6c59;
+  transition: color 0.3s ease;
+}
+
+.back-link:hover {
+  color: #c7a065;
+}
+
+/* Left list (hidden until a post is opened) */
+.left-post-list {
+  display: none;
+  padding: 1.5rem 3rem 3rem;
+  border-top: 1px solid #e5e5e5;
+}
+
+.posts-wrap.single-view .left-post-list {
+  display: block;
+}
+
+/* ===============================
+   RIGHT SIDE — Post List (Default)
+=============================== */
+
+.post-right {
+  position: relative;
+  background: #fff;
+  border-left: 1px solid #e5e5e5;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.post-list {
+  position: absolute;
+  inset: 0;
+  overflow-y: auto;
+  padding: 3rem 3rem;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
+}
+
+.post-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.post-list::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 6px;
+}
+
+.post-item {
+  padding: 1.6rem 1rem;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.post-item:hover {
+  background: rgba(199, 160, 101, 0.08);
+  border-left: 3px solid #c7a065;
+}
+
+.post-item.active {
+  background: rgba(199, 160, 101, 0.08);
+  border-left: 3px solid #c7a065;
+}
+
+.post-item h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 0.4rem;
+}
+
+.post-item p {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ===============================
+   POST DETAIL PANEL
+=============================== */
+
+.post-detail .post-full {
+  color: #111;
+}
+
+.post-detail {
+  position: absolute;
+  inset: 0;
+  background: #fff;
+  padding: 2rem 3rem;
+  overflow-y: auto;
+  display: none;
+}
+
+.post-detail.active {
+  display: block;
+  animation: fadeIn 0.4s ease;
+}
+
+.post-detail.active h2 {
+  color: #c7a065;
+  position: relative;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.post-detail.active h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 60px;
+  height: 2px;
+  background: #c7a065;
+  border-radius: 2px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ===============================
+   WHEN A POST IS OPEN (Stacked Layout)
+=============================== */
+
+.posts-wrap.single-view {
+  grid-template-columns: 45% 55%;
+}
+
+.posts-wrap.single-view .post-list {
+  display: none;
+}
+
+.posts-wrap.single-view .post-detail {
+  position: static;
+  display: block;
+  border-left: 1px solid #e5e5e5;
+}
+
+/* ===============================
+   RESPONSIVE
+=============================== */
+
+@media (max-width:960px) {
+  .posts-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .post-side-text {
+    height: auto;
+  }
+
+  .chapter-cover {
+    height: 40vh;
+  }
+
+  .post-list,
+  .post-detail {
+    padding: 2rem;
+  }
+}
+
+/* Smooth scrolling for the left side */
+.post-side-text {
+  scroll-behavior: smooth;
+}

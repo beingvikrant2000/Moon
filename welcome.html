@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome | Birthday Experience</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Playfair+Display:ital,wght@1,500&family=Major+Mono+Display&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/welcome.css">
+</head>
+
+<body class="light">
+    <!-- Loader -->
+    <div class="loader">
+        <div class="progress-bar"></div>
+        <div class="percentage" id="percent">0</div>
+    </div>
+
+    <!-- Welcome Hero -->
+    <section class="welcome-hero" id="welcomeContent">
+        <div class="top-left">
+            <p>It’s <span class="italic">your</span> day</p>
+            <p class="sub">the world feels a bit softer today.</p>
+        </div>
+
+        <h1 class="hero-name">PRERNA</h1>
+        <span class="bg-aphla">P</span>
+
+        <div class="bottom-text">scroll to begin</div>
+    </section>
+
+    <!-- Intro Text -->
+    <section class="intro-text">
+        <p>I am the <span class="italic">voice</span> behind this story.</p>
+        <p>Every line you’ll feel is <span class="italic">written</span> for you.</p>
+        <p>Let the words <span class="italic">breathe</span> first, then follow them.</p>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience-cards">
+        <div class="experience-header">
+            <h2>Experience</h2>
+            <a href="chapters.html" class="view-all">View all</a>
+        </div>
+
+        <div class="card-grid">
+            <div class="grid-column">
+                <!-- Experience card -->
+                <a href="experience.html" class="exp-card experience-card">
+                    <img src="assets/images/experience-cover.jpg" alt="Experience" />
+                    <div class="overlay">
+                        <div class="tags">
+                            <span>Interactive</span>
+                            <span>Monologue</span>
+                        </div>
+                        <h3><strong>Scene</strong> Journey</h3>
+                    </div>
+                </a>
+                <!-- Chapters card -->
+                <a href="chapters.html" class="exp-card chapters-card">
+                    <img src="assets/images/chapters-cover.jpg" alt="Chapters" />
+                    <div class="overlay">
+                        <div class="tags">
+                            <span>Short Reads</span>
+                            <span>Chapters</span>
+                        </div>
+                        <h3><strong>Written</strong> Chapters</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="grid-column">
+
+                <!-- Gallery card -->
+                <a href="gallery.html" class="exp-card gallery-card">
+                    <img src="assets/images/gallery-cover.jpg" alt="Gallery" />
+                    <div class="overlay blur">
+                        <div class="tags">
+                            <span>Coming soon</span>
+                            <span>Gallery</span>
+                        </div>
+                        <h3><strong>Gallery</strong> Moments</h3>
+                    </div>
+                </a>
+
+                <!-- Reels card -->
+                <a href="reels.html" class="exp-card reels-card">
+                    <img src="assets/images/reels-cover.jpg" alt="Reels" />
+                    <div class="overlay">
+                        <div class="tags">
+                            <span>Visual</span>
+                            <span>Reels</span>
+                        </div>
+                        <h3><strong>Motion</strong> Frames</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Cursor Trail -->
+    <div class="cursor-trail"></div>
+
+    <!-- Modal Lock Message -->
+    <div class="modal-lock hidden" id="lockModal">
+        <div class="modal-content">
+            <p>Complete the monologue first to unlock the gallery.</p>
+            <button id="closeModal">Okay</button>
+        </div>
+    </div>
+
+
+    <!-- GSAP 3 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="js/welcome.js"></script>
+</body>
+
+</html>

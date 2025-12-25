@@ -1,0 +1,245 @@
+/* ===============================
+   INTERACTIVE CINEMATIC EXPERIENCE
+   Black & Gold Edition
+=============================== */
+
+/* -------- GLOBAL -------- */
+.stage {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  background: radial-gradient(1200px 1200px at 70% 20%, #141414, #0c0c0c);
+  color: #e8e8e8;
+  font-family: "Inter", sans-serif;
+}
+
+/* -------- BACKGROUND VIDEO -------- */
+.stage .backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.stage .backdrop::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.75));
+  z-index: 2;
+}
+
+.stage .backdrop-media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.9) brightness(0.85);
+  transition: opacity 0.8s ease;
+  z-index: 1;
+}
+
+/* -------- DIALOGUE CARD -------- */
+.dialogue {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  z-index: 5;
+  padding: 24px;
+}
+
+.card {
+  width: min(780px, 92vw);
+  background: rgba(12, 12, 12, 0.55);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(201, 164, 92, 0.25);
+  border-radius: 18px;
+  padding: 28px 26px 22px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45),
+              inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+  color: #e8e8e8;
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+/* GSAP will fade this in after video ends */
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.5s ease;
+}
+
+
+
+/* -------- CHAPTER LABEL -------- */
+.chapter {
+  font-family: "Playfair Display", serif;
+  color: #c9a45c;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.chapter .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #c9a45c;
+  box-shadow: 0 0 0 6px rgba(201, 164, 92, 0.35);
+}
+
+/* -------- NARRATION SUBTITLES -------- */
+.narration {
+  position: absolute;
+  bottom: 7%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, .9);
+  z-index: 20;
+  pointer-events: none;
+}
+
+
+/* Typing caret */
+.caret {
+  display: inline-block;
+  width: 10px;
+  height: 1.2em;
+  margin-left: 4px;
+  background: #e8e8e8;
+  animation: blink 1s steps(1, end) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* -------- CHOICES & RESPONSES -------- */
+.choices {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.choice-btn {
+  background: #1c1c1c;
+  color: #e8e8e8;
+  border: 1px solid rgba(201, 164, 92, 0.35);
+  border-radius: 12px;
+  padding: 12px 14px;
+  text-align: left;
+  transition: all 0.22s ease;
+  cursor: pointer;
+}
+
+.choice-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 0 4px rgba(201, 164, 92, 0.35);
+}
+
+.choice-btn:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+
+.response {
+  margin-top: 1.25rem;
+  font-style: italic;
+  color: #c9a45c;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.response.show {
+  opacity: 1;
+}
+
+/* -------- CONTINUE BUTTON -------- */
+.continue {
+  display: none;
+  margin-top: 18px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(201, 164, 92, 0.45);
+  background: transparent;
+  color: #c9a45c;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: all 0.35s ease;
+}
+
+.continue.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.continue .pulse {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #c9a45c;
+  box-shadow: 0 0 0 0 rgba(201, 164, 92, 0.35);
+  animation: pulse 1.8s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(201, 164, 92, 0.35);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(201, 164, 92, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(201, 164, 92, 0);
+  }
+}
+
+/* -------- DEBUG HUD -------- */
+.hud {
+  position: fixed;
+  right: 14px;
+  bottom: 12px;
+  font-size: 12px;
+  color: #b3b3b3;
+  opacity: 0.65;
+}
+
+/* -------- RESPONSIVE -------- */
+@media (max-width: 768px) {
+  .narration {
+    font-size: 17px;
+    bottom: 8%;
+    padding: 0 1.2rem;
+  }
+
+  .card {
+    width: 94vw;
+    padding: 22px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .narration {
+    font-size: 15px;
+    bottom: 10%;
+  }
+
+  .choice-btn {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+}

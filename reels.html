@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reels</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/reels.css" />
+</head>
+
+<body>
+    <header class="reels-header">
+        <a href="welcome.html" class="back-link" title="Back to Home">←</a>
+        <h1>For Her</h1>
+        <span class="sub">A space for what I couldn’t send</span>
+    </header>
+
+    <main class="reels-wrap">
+        <!-- Left text column -->
+        <div class="reel-side-text">
+            <h2 class="side-heading">
+                Unspoken<br>
+                Reels of<br> My <span>Heart</span>
+            </h2>
+        </div>
+
+        <!-- Reel player -->
+        <section id="playerPane" class="reel-player">
+            <div class="reel-frame" id="reelFrame">
+                <video id="mainVideo" playsinline loop preload="metadata"></video>
+                <div class="hud">
+                    <div class="tag" id="positionTag">1 / 10</div>
+                    <div class="help">Scroll or swipe • Tap a thumbnail to jump</div>
+                </div>
+                <button id="playOverlay" class="play-overlay">
+                </button>
+
+                <button id="unmuteBtn" class="unmute-btn">
+                    🔊 Tap for sound
+                </button>
+
+            </div>
+        </section>
+
+        <!-- Right-side library -->
+        <aside id="libraryPane" class="reel-library"></aside>
+    </main>
+
+    <script src="https://cdn.skypack.dev/gsap@3.12.2" type="module"></script>
+    <script src="./js/reels.js" type="module"></script>
+</body>
+
+</html>

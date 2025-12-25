@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery | Birthday Experience</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Playfair+Display:wght@500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/gallery.css" />
+</head>
+
+<body>
+    <div class="gallery-wrapper">
+        <!-- Left text block -->
+        <section class="gallery-text">
+            <h1>
+                Glimpse<br>
+                Of&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span>Prerna’s</span><br>
+                Story’s&nbsp;&nbsp;&nbsp;Light
+            </h1>
+            <p>Each frame carries a trace of warmth, memory, and quiet strength.</p>
+            <a href="welcome.html" class="back-link">← Back to Home</a>
+        </section>
+
+        <!-- Right stacked images -->
+        <section class="gallery-images" id="galleryImages">
+            <div class="img-col scroll-1"></div>
+            <div class="img-col scroll-2"></div>
+            <div class="img-col scroll-3"></div>
+        </section>
+
+    </div>
+
+    <!-- audio song -->
+    <!-- <audio id="bgSong" src="assets/audio/gallery-song.mp3"></audio> -->
+    <audio id="bgSong" src="./assets/audio/gallery-song.mp3" autoplay loop></audio>
+
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+
+</html>

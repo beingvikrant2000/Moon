@@ -1,0 +1,72 @@
+[
+  {
+    "id": "Origins",
+    "title": "Origins",
+    "theme": "Where softness begins",
+    "status": "Open",
+    "cover": "./assets/images/chapters/chapter1.jpg"
+  },
+  {
+    "id": "Self",
+    "title": "Self",
+    "theme": "The human behind the heart",
+    "status": "Open",
+    "cover": "./assets/images/chapters/chapter2.jpg"
+  },
+  {
+    "id": "Pulse",
+    "title": "Pulse",
+    "theme": "The first quiet feeling",
+    "status": "Open",
+    "cover": "./assets/images/chapters/chapter3.jpg"
+  },
+  {
+    "id": "Silence",
+    "title": "Silence",
+    "theme": "What love never said",
+    "status": "Open",
+    "cover": "./assets/images/chapters/chapter4.jpg"
+  },
+  {
+    "id": "Echoes",
+    "title": "Echoes",
+    "theme": "The memories that stayed",
+    "status": "Open",
+    "cover": "./assets/images/chapters/chapter5.jpg"
+  },
+  {
+    "id": "Vows",
+    "title": "Vows",
+    "theme": "The love that stays",
+    "status": "Open",
+    "cover": "./assets/images/chapters/chapter6.jpg"
+  },
+  {
+    "id": "Haven",
+    "title": "Haven",
+    "theme": "The safe place within you",
+    "status": "Open",
+    "cover": "./assets/images/chapters/chapter7.jpg"
+  },
+  {
+    "id": "Knowing",
+    "title": "Knowing",
+    "theme": "The truth we found",
+    "status": "Open",
+    "cover": "./assets/images/chapters/chapter8.jpg"
+  },
+  {
+    "id": "Faith",
+    "title": "Faith",
+    "theme": "The patience of love",
+    "status": "Open",
+    "cover": "./assets/images/chapters/chapter9.jpg"
+  },
+  {
+    "id": "Forever",
+    "title": "Forever",
+    "theme": "The quiet after everything",
+    "status": "Open",
+    "cover": "./assets/images/chapters/chapter10.jpg"
+  }
+]

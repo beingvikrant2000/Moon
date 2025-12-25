@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Posts</title>
+  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" href="./css/posts.css" />
+</head>
+<body>
+  <div class="posts-wrap">
+    <!-- LEFT SIDE -->
+    <section class="post-side-text" id="chapterInfo">
+      <div class="chapter-cover">
+        <img id="chapterImage" alt="chapter cover" loading="lazy" />
+      </div>
+      <div class="chapter-text">
+        <h1><span id="chapterTitle"></span></h1>
+        <p id="chapterTheme"></p>
+        <a href="chapters.html" class="back-link">← Back to Chapters</a>
+      </div>
+      <!-- Hidden list that appears below cover when post opens -->
+      <div class="left-post-list" id="leftPostsList"></div>
+    </section>
+
+    <!-- RIGHT SIDE -->
+    <section class="post-right">
+      <div class="post-list" id="postsList"></div>
+      <div class="post-detail" id="postDetail"></div>
+    </section>
+  </div>
+
+  <script src="./js/posts.js" type="module"></script>
+</body>
+</html>

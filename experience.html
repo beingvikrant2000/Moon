@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Interactive Story — Cinematic Mode</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/experience.css" />
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+  <!-- JS -->
+  <script defer src="/js/experience.js"></script>
+</head>
+
+<body>
+
+  <main class="stage">
+
+    <!-- BACKGROUND VIDEO -->
+    <div class="backdrop">
+      <video
+        id="bgVideo"
+        class="backdrop-media"
+        autoplay
+        muted
+        playsinline
+      ></video>
+    </div>
+
+    <!-- SUBTITLE (NARRATION BELOW VIDEO) -->
+    <div class="narration" id="narration"></div>
+
+    <!-- PROMPT + CHOICES + RESPONSE -->
+    <section class="dialogue">
+      <div class="card">
+
+        <!-- Chapter Label -->
+        <div class="chapter">
+          <span class="dot"></span>
+          <span id="chapterLabel">Chapter One — Birthday</span>
+        </div>
+
+        <!-- Choices (show after video ends) -->
+        <div class="choices" id="choices"></div>
+
+        <!-- Response (after choice click) -->
+        <div class="response" id="response"></div>
+
+        <!-- Continue (optional/manual override) -->
+        <button class="continue" id="continueBtn">
+          <span class="pulse"></span> Continue
+        </button>
+
+      </div>
+    </section>
+    
+    <!-- DEBUG HUD (optional, shows scene ID) -->
+    <div class="hud" id="hud"></div>
+
+  </main>
+
+</body>
+</html>

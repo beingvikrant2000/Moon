@@ -1,0 +1,122 @@
+/* ===============================
+   LAYOUT
+=============================== */
+.chapters-wrap {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  background: #fafafa;
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* LEFT PANEL */
+.chapter-side-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem;
+  color: #111;
+}
+
+.side-heading {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #333;
+  font-size: clamp(2.8rem, 4.8vw, 4rem);
+}
+
+.side-heading span {
+  color: #d5a463;
+}
+
+.side-sub {
+  margin-top: 1.5rem;
+  color: #555;
+  font-size: 1rem;
+  max-width: 360px;
+  line-height: 1.6;
+}
+
+.back-link {
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.back-link:hover {
+  color: #d5a463;
+}
+
+/* RIGHT PANEL */
+.chapter-list {
+  background: #fff;
+  height: 100vh;
+  overflow-y: auto;
+  padding: 4rem 3rem;
+  border-left: 1px solid #e5e5e5;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
+}
+
+.chapter-list::-webkit-scrollbar {
+  width: 6px;
+}
+.chapter-list::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 6px;
+}
+
+/* CHAPTER ROWS */
+.chapter-row {
+  padding: 1.4rem 1rem;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 0.8fr;
+  align-items: center;
+  transition: background 0.3s ease;
+}
+
+.chapter-row:hover {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.chapter-row .title {
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #111;
+}
+
+.chapter-row .theme {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.chapter-row .status {
+  text-align: right;
+  font-size: 0.85rem;
+  color: #999;
+}
+
+/* RESPONSIVE */
+@media (max-width: 960px) {
+  .chapters-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .chapter-side-text {
+    text-align: center;
+    padding: 3rem 2rem 1rem;
+  }
+
+  .chapter-list {
+    border-left: none;
+    padding: 2rem;
+    height: auto;
+  }
+}

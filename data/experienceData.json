@@ -1,0 +1,384 @@
+[
+  {
+    "id": "birthday-1",
+    "chapter": "Chapter One — Birthday",
+    "video": "/assets/videos/scenes/Scene1.mp4",
+    "narration": "I didn’t want to say happy birthday in a message that disappears. So I built this instead — a space that remembers you.",
+    "prompt": "How do you react?",
+    "choices": [
+      { "text": "You really built this… for me?", "response": "Yeah. Some people deserve to be celebrated properly." },
+      { "text": "That’s a lot of effort for a birthday.", "response": "Maybe. But some gestures are worth the time they steal." },
+      { "text": "I don’t even know what to say.", "response": "Then don’t say anything yet. Just stay here for a minute." }
+    ],
+    "next": "birthday-2"
+  },
+  {
+    "id": "birthday-2",
+    "chapter": "Chapter One — Birthday",
+    "video": "/assets/videos/scenes/Scene1.mp4",
+    "narration": "Today isn’t just another day. It’s the day the world became a little softer — because you exist in it.",
+    "prompt": "How do you take compliments like that?",
+    "choices": [
+      { "text": "I’m not used to hearing things like this.", "response": "Maybe that’s why you should hear them more often." },
+      { "text": "That’s sweet, but you’re exaggerating.", "response": "I wish I was. You make it easy to say nice things." },
+      { "text": "Maybe… I needed to hear that today.", "response": "Then I’m glad this found you at the right time." }
+    ],
+    "next": "birthday-3"
+  },
+  {
+    "id": "birthday-3",
+    "chapter": "Chapter One — Birthday",
+    "video": "/assets/videos/scenes/Scene1.mp4",
+    "narration": "You’ve been strong in ways people never saw, gentle in moments no one thanked you for.",
+    "prompt": "What do you feel right now?",
+    "choices": [
+      { "text": "Peace, I think.", "response": "Good. That’s exactly what I hoped you’d feel." },
+      { "text": "A bit overwhelmed.", "response": "Then breathe. You don’t have to take it all in at once." },
+      { "text": "Still wondering why me.", "response": "Because you forget how much you matter." }
+    ],
+    "next": "birthday-4"
+  },
+  {
+    "id": "birthday-4",
+    "chapter": "Chapter One — Birthday",
+    "video": "/assets/videos/birthday/4.mp4",
+    "narration": "I didn’t make this to impress you. I made it so you’d have one quiet corner of the internet reminding you how loved you are, even when no one says it out loud.",
+    "prompt": "Do you want to keep reading?",
+    "choices": [
+      { "text": "Yes, tell me more.", "response": "Then let me show you the person behind these words." },
+      { "text": "Maybe later.", "response": "That’s okay. The story will wait." }
+    ],
+    "next": "about-1"
+  },
+
+  {
+    "id": "about-1",
+    "chapter": "Chapter Two — About Me",
+    "video": "/assets/videos/about/1.mp4",
+    "narration": "You’ve already seen the gift. Now, maybe you should meet the person who built it.",
+    "prompt": "What do you want to know first?",
+    "choices": [
+      { "text": "Who are you really?", "response": "The kind of person who rewrites messages three times before sending one. And still gets the words wrong." },
+      { "text": "Why did you do all this?", "response": "Because some people deserve to know how they changed someone else’s world." },
+      { "text": "Are you always this sentimental?", "response": "Only when it’s about someone who mattered more than I expected." }
+    ],
+    "next": "about-2"
+  },
+  {
+    "id": "about-2",
+    "chapter": "Chapter Two — About Me",
+    "video": "/assets/videos/about/2.mp4",
+    "narration": "I’m not great at grand things. I’m better at little ones — remembering your coffee order, noticing the silence in your voice, finding beauty in what you think nobody sees.",
+    "prompt": "What do you see when you look at people?",
+    "choices": [
+      { "text": "Their flaws.", "response": "Flaws are where the truth hides. That’s what makes people real." },
+      { "text": "Their effort.", "response": "Exactly. Trying counts more than winning." },
+      { "text": "Their stories.", "response": "Stories. Everyone’s a walking memory of something they survived." }
+    ],
+    "next": "about-3"
+  },
+  {
+    "id": "about-3",
+    "chapter": "Chapter Two — About Me",
+    "video": "/assets/videos/about/3.mp4",
+    "narration": "I’m not writing this because I expect anything. I just want you to know the person who stayed quiet all this time still cared loudly.",
+    "prompt": "What do you think about that kind of love?",
+    "choices": [
+      { "text": "It’s beautiful, even when unspoken.", "response": "Then maybe we understand each other better than I thought." },
+      { "text": "It sounds lonely.", "response": "Maybe. But some silences feel full, not empty." },
+      { "text": "It’s rare — and maybe dangerous.", "response": "Dangerous things are often the most human." }
+    ],
+    "next": "about-4"
+  },
+  {
+    "id": "about-4",
+    "chapter": "Chapter Two — About Me",
+    "video": "/assets/videos/about/4.mp4",
+    "narration": "That’s enough about me. You didn’t come here for introductions. You came because somehow, the silence between us started feeling like home.",
+    "prompt": "Do you want to hear what that silence sounded like?",
+    "choices": [
+      { "text": "Yes.", "response": "Then listen — not to the words, but to what stayed unsaid." },
+      { "text": "I think I do.", "response": "Then listen — not to the words, but to what stayed unsaid." }
+    ],
+    "next": "unsaid-1"
+  },
+
+  {
+    "id": "unsaid-1",
+    "chapter": "Chapter Three — The Unsaid",
+    "video": "/assets/videos/unsaid/1.mp4",
+    "narration": "There are things I never said — not because they weren’t true, but because silence felt safer than losing you.",
+    "prompt": "What do you think hurts more?",
+    "choices": [
+      { "text": "Saying too much.", "response": "Yeah… words can ruin something that silence was protecting." },
+      { "text": "Saying nothing at all.", "response": "Silence is heavy. But at least it doesn’t lie." },
+      { "text": "Hearing what you’re not ready for.", "response": "Truth always arrives early. Readiness never does." }
+    ],
+    "next": "unsaid-2"
+  },
+  {
+    "id": "unsaid-2",
+    "chapter": "Chapter Three — The Unsaid",
+    "video": "/assets/videos/unsaid/2.mp4",
+    "narration": "I used to type and delete messages a hundred times. Each one ended the same way — maybe tomorrow.",
+    "prompt": "Have you ever wanted to say something but couldn’t?",
+    "choices": [
+      { "text": "More times than I’ll admit.", "response": "Then maybe you’ll understand this chapter better than anyone." },
+      { "text": "No — I usually just say it.", "response": "That’s brave. I envy that kind of clarity." },
+      { "text": "I think silence is safer.", "response": "Safety has a price — it’s called almost." }
+    ],
+    "next": "unsaid-3"
+  },
+  {
+    "id": "unsaid-3",
+    "chapter": "Chapter Three — The Unsaid",
+    "video": "/assets/videos/unsaid/3.mp4",
+    "narration": "It took me a while to learn that not everything unspoken is unfinished. Sometimes, silence is just love finding a gentler way to exist.",
+    "prompt": "Do you think silence can still mean love?",
+    "choices": [
+      { "text": "Yes. Some things are louder when left unsaid.", "response": "Then maybe you already speak my language." },
+      { "text": "No. Silence feels like absence.", "response": "Absence is just love’s way of learning patience." },
+      { "text": "Maybe. Depends on who it’s from.", "response": "Fair. Some names carry more weight than words ever will." }
+    ],
+    "next": "memories-1"
+  },
+
+  {
+    "id": "memories-1",
+    "chapter": "Chapter Four — Memories",
+    "video": "/assets/videos/memories/1.mp4",
+    "narration": "Funny how memories don’t really leave — they just learn new ways to stay.",
+    "prompt": "What do memories mean to you?",
+    "choices": [
+      { "text": "Proof that something was real.", "response": "Exactly. They’re what remain when everything else fades." },
+      { "text": "A place I visit too often.", "response": "Then maybe it’s time to make peace with the places that hurt." },
+      { "text": "The only thing time can’t steal.", "response": "That’s beautiful — maybe that’s why I still carry mine." }
+    ],
+    "next": "memories-2"
+  },
+  {
+    "id": "memories-2",
+    "chapter": "Chapter Four — Memories",
+    "video": "/assets/videos/memories/2.mp4",
+    "narration": "There’s a café that still smells like you. Benches that still remember our conversations.",
+    "prompt": "If you could relive one thing, what would it be?",
+    "choices": [
+      { "text": "The laughter.", "response": "Same. It’s strange how joy echoes longer than words." },
+      { "text": "The quiet moments.", "response": "Those silences said more than anything ever did." },
+      { "text": "The first look.", "response": "That first look — I’ve replayed it more times than I’ll admit." }
+    ],
+    "next": "memories-3"
+  },
+  {
+    "id": "memories-3",
+    "chapter": "Chapter Four — Memories",
+    "video": "/assets/videos/memories/3.mp4",
+    "narration": "I used to wish I could relive it all. Now I just want to remember it kindly — without the ache.",
+    "prompt": "Do you think love ever really fades?",
+    "choices": [
+      { "text": "It changes shape.", "response": "Yes — from fire to warmth." },
+      { "text": "It turns into peace.", "response": "Exactly. Some love becomes calm instead of gone." },
+      { "text": "It never does.", "response": "Then maybe that’s what this is — what’s left when everything else leaves." }
+    ],
+    "next": "promises-1"
+  },
+
+  {
+    "id": "promises-1",
+    "chapter": "Chapter Five — Promises",
+    "video": "/assets/videos/promises/1.mp4",
+    "narration": "Promises aren’t loud. They don’t shout or sparkle. They just stay — quiet, steady, even when no one’s watching.",
+    "prompt": "What do you think makes a promise last?",
+    "choices": [
+      { "text": "Consistency.", "response": "Yes. It’s not about always knowing what to say — it’s about always showing up." },
+      { "text": "Effort.", "response": "Effort. The language love speaks when words run out." },
+      { "text": "Faith.", "response": "Faith — the only kind of magic I still believe in." }
+    ],
+    "next": "promises-2"
+  },
+  {
+    "id": "promises-2",
+    "chapter": "Chapter Five — Promises",
+    "video": "/assets/videos/promises/2.mp4",
+    "narration": "I don’t want the kind of love that needs proving every day. I want the kind that breathes quietly in the background — showing up in the simplest ways.",
+    "prompt": "What kind of love feels right to you?",
+    "choices": [
+      { "text": "The one that stays through silence.", "response": "Then you already understand mine." },
+      { "text": "The one that forgives.", "response": "Forgiveness is the strongest form of love — it’s love that’s survived truth." },
+      { "text": "The one that lets you be yourself.", "response": "That’s the one I’d choose too — where being real is enough." }
+    ],
+    "next": "promises-3"
+  },
+  {
+    "id": "promises-3",
+    "chapter": "Chapter Five — Promises",
+    "video": "/assets/videos/promises/3.mp4",
+    "narration": "I’ll still forget things. I’ll still get quiet. But I’ll never make you question if you matter.",
+    "prompt": "What do you need to feel safe with someone?",
+    "choices": [
+      { "text": "Honesty.", "response": "Always. Truth is the only thing that keeps love clean." },
+      { "text": "Patience.", "response": "Patience — the purest proof of love." },
+      { "text": "Presence.", "response": "Exactly. Being there beats every promise ever made." }
+    ],
+    "next": "reassurance-1"
+  },
+
+  {
+    "id": "reassurance-1",
+    "chapter": "Chapter Six — Reassurance",
+    "video": "/assets/videos/reassurance/1.mp4",
+    "narration": "You don’t have to earn love here. You don’t have to explain your pauses or your bad days. Just breathe — I’m not going anywhere.",
+    "prompt": "How do you feel when someone says that?",
+    "choices": [
+      { "text": "Relieved.", "response": "Then let that relief stay a little longer. You deserve rest." },
+      { "text": "Suspicious.", "response": "That’s fair. Trust takes time, and I have plenty." },
+      { "text": "I don’t believe words easily.", "response": "That’s okay. I’d rather prove it slowly than say it fast." }
+    ],
+    "next": "reassurance-2"
+  },
+  {
+    "id": "reassurance-2",
+    "chapter": "Chapter Six — Reassurance",
+    "video": "/assets/videos/reassurance/2.mp4",
+    "narration": "You’ve carried too much alone. And I know what it’s like — pretending the weight is fine until it isn’t.",
+    "prompt": "What’s harder for you?",
+    "choices": [
+      { "text": "Trusting people.", "response": "Then don’t force it. Trust doesn’t need deadlines." },
+      { "text": "Letting go of control.", "response": "Control keeps us safe — until safety finds another form." },
+      { "text": "Asking for help.", "response": "You shouldn’t have to ask. The right people just show up." }
+    ],
+    "next": "reassurance-3"
+  },
+  {
+    "id": "reassurance-3",
+    "chapter": "Chapter Six — Reassurance",
+    "video": "/assets/videos/reassurance/3.mp4",
+    "narration": "You’re not too much. You’re not hard to love. You’re just used to loving harder than you’ve been loved back.",
+    "prompt": "What does being cared for feel like to you?",
+    "choices": [
+      { "text": "Peace.", "response": "Then may this peace stay." },
+      { "text": "Fear.", "response": "It’s okay. Sometimes calm feels foreign after chaos." },
+      { "text": "Like something temporary.", "response": "Maybe it lasts when we stop expecting it to leave." }
+    ],
+    "next": "answers-1"
+  },
+
+  {
+    "id": "answers-1",
+    "chapter": "Chapter Seven — The Answers",
+    "video": "/assets/videos/answers/1.mp4",
+    "narration": "Maybe this isn’t about falling in love anymore. Maybe it’s about understanding why we did.",
+    "prompt": "What do you think love really is?",
+    "choices": [
+      { "text": "Understanding.", "response": "Exactly. The kind that doesn’t need fixing — just seeing." },
+      { "text": "Effort.", "response": "Effort is how love breathes. Quiet, steady, constant." },
+      { "text": "Timing.", "response": "Timing… maybe the universe runs on it more than we admit." }
+    ],
+    "next": "answers-2"
+  },
+  {
+    "id": "answers-2",
+    "chapter": "Chapter Seven — The Answers",
+    "video": "/assets/videos/answers/2.mp4",
+    "narration": "You were never the question I was trying to answer. You were the answer I wasn’t brave enough to ask for.",
+    "prompt": "What do you think he understood about her?",
+    "choices": [
+      { "text": "Her strength.", "response": "The way she stayed kind, even when tired — that kind of strength humbles you." },
+      { "text": "Her silence.", "response": "Her silence was never empty. It was full of things too sacred for words." },
+      { "text": "Her chaos.", "response": "Her chaos wasn’t a flaw. It was her way of loving everything too deeply." }
+    ],
+    "next": "answers-3"
+  },
+  {
+    "id": "answers-3",
+    "chapter": "Chapter Seven — The Answers",
+    "video": "/assets/videos/answers/3.mp4",
+    "narration": "I used to think love was about answers. Now I think it’s about questions that don’t scare you anymore.",
+    "prompt": "Do you think understanding someone is love?",
+    "choices": [
+      { "text": "Yes. Maybe it’s the purest kind.", "response": "Then maybe you already know what this was." },
+      { "text": "Sometimes. Depends who’s doing the understanding.", "response": "True. Understanding without care is just observation." },
+      { "text": "No. Love needs more than that.", "response": "Maybe. But understanding is where love learns to stay." }
+    ],
+    "next": "patient-1"
+  },
+
+  {
+    "id": "patient-1",
+    "chapter": "Chapter Eight — Patient Path",
+    "video": "/assets/videos/patient/1.mp4",
+    "narration": "Maybe patience isn’t about waiting. Maybe it’s about trusting that what’s meant will recognize you — even if it takes time.",
+    "prompt": "What do you think time does to love?",
+    "choices": [
+      { "text": "Heals it.", "response": "Yes. Healing doesn’t mean forgetting — it means remembering without pain." },
+      { "text": "Tests it.", "response": "Every test only shows what refuses to break." },
+      { "text": "Refines it.", "response": "Refines — like gold that softens before it shines." }
+    ],
+    "next": "patient-2"
+  },
+  {
+    "id": "patient-2",
+    "chapter": "Chapter Eight — Patient Path",
+    "video": "/assets/videos/patient/2.mp4",
+    "narration": "I’ve stopped chasing answers. Now I walk slowly, letting faith lead.",
+    "prompt": "Do you believe love can return in another form?",
+    "choices": [
+      { "text": "Always.", "response": "Then you already understand patience — it’s just love reincarnated as hope." },
+      { "text": "Maybe once it’s healed.", "response": "Exactly. Healed love doesn’t return to claim; it returns to bless." },
+      { "text": "No, some things only happen once.", "response": "Maybe that’s true — but even once can be forever in memory." }
+    ],
+    "next": "patient-3"
+  },
+  {
+    "id": "patient-3",
+    "chapter": "Chapter Eight — Patient Path",
+    "video": "/assets/videos/patient/3.mp4",
+    "narration": "I still think of you sometimes. Not as something I lost — but as something that taught me how to keep.",
+    "prompt": "If you could tell the person you loved one thing now, what would it be?",
+    "choices": [
+      { "text": "Thank you.", "response": "Gratitude — the quietest proof that love still lives." },
+      { "text": "I forgive you.", "response": "Forgiveness is what peace sounds like when it finally speaks." },
+      { "text": "I still wish you well.", "response": "That’s all that really matters — wishing well, even from afar." }
+    ],
+    "next": "epilogue-1"
+  },
+
+  {
+    "id": "epilogue-1",
+    "chapter": "Epilogue — For You, Always",
+    "video": "/assets/videos/epilogue/1.mp4",
+    "narration": "If this is where the story ends, I hope you felt seen — not in the loud, dramatic way, but in the quiet kind that makes you pause.",
+    "prompt": "Do you believe in endings?",
+    "choices": [
+      { "text": "Yes. Every story ends.", "response": "Then let this one end softly, like a candle — not because it died, but because it did its job." },
+      { "text": "No. Some things just change form.", "response": "Exactly. Maybe love just becomes light — and finds new places to shine." },
+      { "text": "Maybe. It depends how you define ending.", "response": "Maybe endings are just chapters learning to be memories." }
+    ],
+    "next": "epilogue-2"
+  },
+  {
+    "id": "epilogue-2",
+    "chapter": "Epilogue — For You, Always",
+    "video": "/assets/videos/epilogue/2.mp4",
+    "narration": "I didn’t write this to make you feel something. I wrote it to remind you that you already do.",
+    "prompt": "What did this story make you feel?",
+    "choices": [
+      { "text": "Peace.", "response": "Then I hope it stays with you — quietly, like sunlight through glass." },
+      { "text": "Warmth.", "response": "Then keep it. Let it remind you that softness still exists." },
+      { "text": "Something I can’t explain.", "response": "That’s how real things feel — they don’t need explaining." }
+    ],
+    "next": "epilogue-3"
+  },
+  {
+    "id": "epilogue-3",
+    "chapter": "Epilogue — For You, Always",
+    "video": "/assets/videos/epilogue/3.mp4",
+    "narration": "I won’t ask you to stay. I just hope you know this — in some corner of my words, you’ll always be welcome.",
+    "prompt": "Would you like to leave this page or let it play again?",
+    "choices": [
+      { "text": "Leave it.", "response": "Then walk in peace — that’s all I ever wanted for you." },
+      { "text": "Play it again.", "response": "Then let’s start over — not to change it, but to remember how it felt." }
+    ],
+    "next": "birthday-1"
+  }
+]
