@@ -1,7 +1,7 @@
 // =========================
 // Toggle for development (skip loader)
 // =========================
-const DEV_MODE = true; // set false for production
+const DEV_MODE = false; // set false for production
 
 // =========================
 // Loader logic with random pauses
@@ -308,7 +308,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (galleryCard) {
     galleryCard.addEventListener("click", event => {
-      const unlocked = localStorage.getItem("monologueCompleted") === "true";
+      const unlocked = localStorage.getItem("monologueCompleted") === "false";
       if (!unlocked) {
         event.preventDefault(); // stop the link
         lockModal.classList.add("active");
