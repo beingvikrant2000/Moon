@@ -301,24 +301,34 @@ initHoverIcon();
 // =========================
 // Gallery Unlock Logic
 // =========================
-// document.addEventListener("DOMContentLoaded", () => {
-//   const galleryCard = document.querySelector(".gallery-card");
-//   const lockModal = document.getElementById("lockModal");
-//   const closeModal = document.getElementById("closeModal");
+document.addEventListener("DOMContentLoaded", () => {
+  // const galleryCard = document.querySelector(".gallery-card");
+  const experienceCard = document.querySelector(".experience-card");
+  const lockModal = document.getElementById("lockModal");
+  const closeModal = document.getElementById("closeModal");
 
-//   if (galleryCard) {
-//     galleryCard.addEventListener("click", event => {
-//       const unlocked = localStorage.getItem("monologueCompleted") === "true";
-//       if (!unlocked) {
-//         event.preventDefault(); // stop the link
-//         lockModal.classList.add("active");
-//       }
-//     });
-//   }
+  if (experienceCard) {
+    experienceCard.addEventListener("click", event => {
+      const unlocked = localStorage.getItem("monologueCompleted") === "true";
+      if (!unlocked) {
+        event.preventDefault(); // stop the link
+        lockModal.classList.add("active");
+      }
+    });
+  }
+  // if (galleryCard) {
+  //   galleryCard.addEventListener("click", event => {
+  //     const unlocked = localStorage.getItem("monologueCompleted") === "true";
+  //     if (!unlocked) {
+  //       event.preventDefault(); // stop the link
+  //       lockModal.classList.add("active");
+  //     }
+  //   });
+  // }
 
-//   if (closeModal) {
-//     closeModal.addEventListener("click", () => {
-//       lockModal.classList.remove("active");
-//     });
-//   }
-// });
+  if (closeModal) {
+    closeModal.addEventListener("click", () => {
+      lockModal.classList.remove("active");
+    });
+  }
+});
