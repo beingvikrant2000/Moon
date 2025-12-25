@@ -1,7 +1,7 @@
 // =========================
 // Toggle for development (skip loader)
 // =========================
-const DEV_MODE = true; // set false for production
+const DEV_MODE = false; // set false for production
 
 // =========================
 // Loader logic with random pauses
@@ -302,12 +302,13 @@ initHoverIcon();
 // Gallery Unlock Logic
 // =========================
 document.addEventListener("DOMContentLoaded", () => {
-  const galleryCard = document.querySelector(".gallery-card");
+  // const galleryCard = document.querySelector(".gallery-card");
+  const experienceCard = document.querySelector(".experience-card");
   const lockModal = document.getElementById("lockModal");
   const closeModal = document.getElementById("closeModal");
 
-  if (galleryCard) {
-    galleryCard.addEventListener("click", event => {
+  if (experienceCard) {
+    experienceCard.addEventListener("click", event => {
       const unlocked = localStorage.getItem("monologueCompleted") === "true";
       if (!unlocked) {
         event.preventDefault(); // stop the link
@@ -315,6 +316,15 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+  // if (galleryCard) {
+  //   galleryCard.addEventListener("click", event => {
+  //     const unlocked = localStorage.getItem("monologueCompleted") === "true";
+  //     if (!unlocked) {
+  //       event.preventDefault(); // stop the link
+  //       lockModal.classList.add("active");
+  //     }
+  //   });
+  // }
 
   if (closeModal) {
     closeModal.addEventListener("click", () => {
