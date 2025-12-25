@@ -308,7 +308,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (galleryCard) {
     galleryCard.addEventListener("click", event => {
-      const unlocked = localStorage.getItem("monologueCompleted") === "false";
+      const unlocked = localStorage.getItem("monologueCompleted") === "true";
       if (!unlocked) {
         event.preventDefault(); // stop the link
         lockModal.classList.add("active");
